@@ -21,7 +21,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      let res = await axios.post("http://localhost:8000/login", {
+      let res = await axios.post("https://notevault-devops.onrender.com/login", {
         email: email,
         password: password
       });

@@ -25,7 +25,7 @@ const [searchMode, setSearchMode] = useState(false);
     async function getNotes() {
         const token = localStorage.getItem("token");
         try {
-            const res = await axios.get("http://localhost:8000/notes",
+            const res = await axios.get("https://notevault-devops.onrender.com/notes",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

@@ -12,7 +12,7 @@ function Register() {
     async function register(e) {
         e.preventDefault();
         try {
-            let res = await axios.post("http://localhost:8000/register", {
+            let res = await axios.post("https://notevault-devops.onrender.com/register", {
                 name: name,
                 email: email,
                 password: password
