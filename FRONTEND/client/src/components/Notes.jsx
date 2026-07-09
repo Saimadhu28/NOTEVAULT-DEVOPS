@@ -48,7 +48,7 @@ const [searchMode, setSearchMode] = useState(false);
         }
 
         const res = await axios.get(
-            `http://localhost:8000/notes/search?q=${search}`,
+            `https://notevault-devops.onrender.com/notes/search?q=${search}`,
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -67,7 +67,7 @@ const [searchMode, setSearchMode] = useState(false);
         e.preventDefault();
         const token = localStorage.getItem("token");
         try {
-            let res = await axios.post("http://localhost:8000/notes",
+            let res = await axios.post("https://notevault-devops.onrender.com/notes",
                 {
                     title,
                     content
@@ -88,7 +88,7 @@ const [searchMode, setSearchMode] = useState(false);
     async function deleteNote(id) {
         const token = localStorage.getItem("token");
         try {
-            await axios.delete(`http://localhost:8000/notes/${id}`, {
+            await axios.delete(`https://notevault-devops.onrender.com/notes/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -103,7 +103,7 @@ const [searchMode, setSearchMode] = useState(false);
         const token = localStorage.getItem("token");
 
         await axios.put(
-            `http://localhost:8000/notes/${id}`,
+            `https://notevault-devops.onrender.com/notes/${id}`,
             { title: newTitle, content: newContent },
             {
                 headers: {
